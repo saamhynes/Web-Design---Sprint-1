@@ -1,0 +1,87 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body,
+nav {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 10pt;
+  color: white;
+}
+
+#mainbox {
+  width: 900px;
+  height: 1000px;
+  background-color: none;
+  text-align: left;
+  border-radius: 4px;
+}
+
+.Left {
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  padding-top: 12px;
+  padding-left: 20px;
+  text-align: left;
+  float: left;
+  border-top-left-radius: 5px;
+  font-size: 15pt;
+}
+
+.Right {
+  width: 700px;
+  height: 50px;
+  background-color: black;
+  float: right;
+  padding-top: 10px;
+  padding-right: 20px;
+  font-size: 15pt;
+  text-align: right;
+  border-top-right-radius: 5px;
+}
+
+nav {
+  background-color: black;
+  font-size: 10pt;
+  color: white;
+}
+
+nav a:link {
+  color: white;
+  font-size: 10pt;
+
+  text-decoration: none;
+}
+
+.underline {
+  position: relative;
+}
+
+.underline::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .underline:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+
+nav a:visited {
+  color: white;
+  font-size: 10pt;
+
+  text-decoration: none;
+}
